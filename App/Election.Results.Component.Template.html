@@ -21,6 +21,9 @@
 			      <td>
 				        <span ng-bind="candidate.votes"></span>
 			      </td>
+            <td>
+                <span ng-bind="$ctrl.getCandidatePercentage(candidate.votes) + '%'"></span>
+            </td>
         </tr>
     </tbody>
 </table>

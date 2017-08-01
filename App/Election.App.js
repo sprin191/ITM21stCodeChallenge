@@ -122,7 +122,7 @@
             ctrl.getCandidatePercentage = function (votes) {
                 var total = _.sumBy(ctrl.candidates, "votes");
                 if (total) {
-                    return 100 * votes / total;
+                    return Math.round((100 * votes / total).toFixed(2));
                 }
                 return 0;
             };
