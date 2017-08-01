@@ -11,17 +11,16 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="candidate in $ctrl.candidates">
+        <tr ng-repeat="candidate in $ctrl.candidates | orderBy: '-votes'">
             <td>
                 <span ng-bind="$index + 1"></span>
             </td>
             <td>
                 <span ng-bind="candidate.name"></span>
             </td>
-			<td>
-				<span ng-bind="candidate.votes"></span>
-			</td>
-
+			      <td>
+				        <span ng-bind="candidate.votes"></span>
+			      </td>
         </tr>
     </tbody>
 </table>

@@ -1,10 +1,10 @@
 (function () {
     "use strict";
-    
+
     angular.module("Election.App", [
         "Election.Component"
     ]);
-    
+
 })();
 
 //Election Component
@@ -23,7 +23,7 @@
         });
 
 		ElectionController.$inject = [ "$timeout" ];
-		
+
 		function ElectionController($timeout){
 			var ctrl = this;
 
@@ -57,7 +57,7 @@
 
 			};
 		}
-		
+
 })();
 
 //Candidate Component
@@ -76,7 +76,7 @@
         });
 
 		CandidateController.$inject = [];
-		
+
 		function CandidateController(){
 			var ctrl = this,
                 buildNewCandidate = function() {
@@ -98,10 +98,10 @@
                 ctrl.newCandidate = buildNewCandidate();
             };
 		}
-		
+
 })(window.angular);
 
-//Restult Component
+//Result Component
 (function () {
     "use strict";
 
@@ -113,9 +113,9 @@
                 candidates: "<"
             }
         });
-		
+
 		ResultsController.$inject = [];
-		
+
 		function ResultsController(){
 			var ctrl = this;
 
@@ -143,15 +143,15 @@
                 onVote: "&"
             }
         });
-		
+
 		VoteController.$inject = [];
 
 		function VoteController(){
 			var ctrl = this;
-			
+
             ctrl.castVote = function (candidate) {
                 ctrl.onVote({ $candidate: candidate });
             };
 		}
-		
+
 })();
