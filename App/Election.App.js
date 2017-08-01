@@ -90,6 +90,11 @@
             ctrl.newCandidate = null;
 
             //TODO Add code to add a new candidate
+            ctrl.addNewCandidate = function (newCandidate) {
+                console.log(ctrl.newCandidate);
+                ctrl.candidates.push(newCandidate);
+                console.log(ctrl.candidates);
+            };
 
             //TODO Add code to remove a candidate
 
