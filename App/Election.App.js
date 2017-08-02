@@ -91,15 +91,21 @@
 
             //Adds a new candidate
             ctrl.addNewCandidate = function (newCandidate) {
-                console.log(ctrl.newCandidate);
+                //console.log(newCandidate);
+                //console.log(ctrl.newCandidate);
                 ctrl.candidates.push(newCandidate);
-                console.log(ctrl.candidates);
+                ctrl.newCandidate = null;
+                //console.log(ctrl.candidates);
             };
 
             //Removes a candidate
             ctrl.deleteCandidate = function(candidate) {
-              var index = ctrl.candidates.indexOf(candidate);
+              //console.log(candidate);
+              //console.log(ctrl.candidates);
+              var index = ctrl.candidates.findIndex(i => i.name === candidate);
+              //console.log(index);
               ctrl.candidates.splice(index, 1);
+              //console.log(ctrl.candidates);
             };
 
             // $onInit is called once at component initialization
