@@ -165,6 +165,7 @@
 			var ctrl = this;
 
             ctrl.castVote = function (candidate) {
+                console.log(hide);
                 ctrl.onVote({ $candidate: candidate });
             };
 		}
