@@ -89,14 +89,18 @@
 
             ctrl.newCandidate = null;
 
-            //TODO Add code to add a new candidate
+            //Adds a new candidate
             ctrl.addNewCandidate = function (newCandidate) {
                 console.log(ctrl.newCandidate);
                 ctrl.candidates.push(newCandidate);
                 console.log(ctrl.candidates);
             };
 
-            //TODO Add code to remove a candidate
+            //Removes a candidate
+            ctrl.deleteCandidate = function(candidate) {
+              var index = ctrl.candidates.indexOf(candidate);
+              ctrl.candidates.splice(index, 1);
+            };
 
             // $onInit is called once at component initialization
             ctrl.$onInit = function () {

@@ -2,9 +2,14 @@
     <div>
         <!-- List of Candidates -->
         <h3>Manage Candidates</h3>
-        <ol>
-			<!--TODO ADD List of Candidate and the ability to remove-->
-        </ol>
+        <table>
+          <tbody>
+            <tr ng-repeat="candidate in $ctrl.candidates">
+              <td ng-bind="candidate.name"></td>
+              <td><button type="button" ng-click="$ctrl.deleteCandidate($ctrl.candidate.name)">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
 
     </div>
     <div>
