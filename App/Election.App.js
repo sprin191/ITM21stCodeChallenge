@@ -94,7 +94,7 @@
                 //console.log(newCandidate);
                 //console.log(ctrl.newCandidate);
                 ctrl.candidates.push(newCandidate);
-                ctrl.newCandidate = null;
+                ctrl.newCandidate = buildNewCandidate();
                 //console.log(ctrl.candidates);
             };
 
