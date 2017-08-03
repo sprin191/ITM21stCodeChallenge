@@ -1,26 +1,32 @@
 <div class="manage">
     <div>
         <!-- List of Candidates -->
+      <div class="manage-options">
         <h3>Manage Candidates</h3>
-        <h4>Delete Candidate</h4>
-        <table>
+      </div>
+
+      <div>
+          <!-- Candidate Form -->
+          <div ng-form="$ctrl.form">
+              <div class="candidate-name">
+                  <h4 class="add-candidate-title">Add New Candidate:</h4>
+                  <input type="text" placeholder="Enter Candidate Name" required ng-model="$ctrl.newCandidate.name"/>
+                  <button type="button" class="btn btn-success add" ng-click="$ctrl.addNewCandidate($ctrl.newCandidate)"><span class="glyphicon glyphicon-plus"></span></button>
+              </div>
+          </div>
+      </div>
+
+      <h4>Delete Candidate:</h4>
+      <table class="table table-borderless">
           <tbody>
             <tr ng-repeat="candidate in $ctrl.candidates">
-              <td ng-bind="candidate.name"></td>
-              <td><button type="button" class="btn btn-danger btn-sm" ng-click="$ctrl.deleteCandidate(candidate.name)"><span class="glyphicon glyphicon-trash"></span></button></td>
+              <td>
+                <a class="delete-click" ng-click="$ctrl.deleteCandidate(candidate.name)"><span class="glyphicon glyphicon-remove-sign remove-icon"></span></a>
+                <span ng-bind="candidate.name"></span>
+              </td>
             </tr>
           </tbody>
         </table>
 
-    </div>
-    <div>
-        <!-- Candidate Form -->
-        <h4>Add Candidate</h4>
-        <div ng-form="$ctrl.form">
-            <div class="candidate-name">
-                <input type="text" placeholder="Enter Candidate Name" required ng-model="$ctrl.newCandidate.name"/>
-                <button type="button" class="btn btn-success add" ng-click="$ctrl.addNewCandidate($ctrl.newCandidate)"><span class="glyphicon glyphicon-plus"></span></button>
-            </div>
-        </div>
     </div>
 </div>

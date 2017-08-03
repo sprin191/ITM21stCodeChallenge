@@ -38,14 +38,32 @@ main {
   color: white;
 }
 
-.vote-options {
+.vote-options, .manage-options {
   text-align: center;
 }
 
-.horizontal-buttons {
+.horizontal-buttons, .add-candidate-title {
   display: inline-block;
 }
 
 .blue-table {
-  border-color: #46b8da;
+  border: .22em solid #46b8da;
+}
+
+.add-candidate-title {
+  margin-right: .5em;
+}
+
+.delete-click:hover {
+  cursor: pointer;
+}
+
+.remove-icon {
+  color: #d9534f;
+  font-size: 1.2em;
+}
+
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th{
+    border: none;
 }
