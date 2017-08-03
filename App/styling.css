@@ -1,3 +1,11 @@
 .main-title {
   text-align: center;
 }
+
+.candidate-name {
+  display: inline;
+}
+
+.add {
+  display: inline;
+}
