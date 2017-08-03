@@ -1,11 +1,51 @@
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("Vendors/Libre_Franklin/LibreFranklin-Regular.ttf");
+}
+
 .main-title {
+  text-align: center;
+  font-family: 'Libre Franklin';
+  font-weight: bold;
+  font-size: 3em;
+  padding-bottom: .5em;
+}
+
+.btn {
+  margin-left: .75em;
+}
+
+main {
+  font-family: 'Libre Franklin';
+}
+
+.results-header {
+  background-color: #5588aa;
+  color: white;
+}
+
+.manage {
+  display: block;
+  border: .10em solid #5588aa;
+  margin-bottom: 1em;
+  padding: 0em 1em 1em 1em;
+}
+
+.vote-header {
+  font-size: 2em;
+  text-align: center;
+  background-color: #5bc0de;
+  color: white;
+}
+
+.vote-options {
   text-align: center;
 }
 
-.candidate-name {
-  display: inline;
+.horizontal-buttons {
+  display: inline-block;
 }
 
-.add {
-  display: inline;
+.blue-table {
+  border-color: #46b8da;
 }

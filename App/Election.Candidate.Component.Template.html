@@ -1,12 +1,13 @@
-<div>
+<div class="manage">
     <div>
         <!-- List of Candidates -->
         <h3>Manage Candidates</h3>
+        <h4>Delete Candidate</h4>
         <table>
           <tbody>
             <tr ng-repeat="candidate in $ctrl.candidates">
               <td ng-bind="candidate.name"></td>
-              <td><button type="button" class="btn btn-danger" ng-click="$ctrl.deleteCandidate(candidate.name)"><span class="glyphicon glyphicon-trash"></span></button></td>
+              <td><button type="button" class="btn btn-danger btn-sm" ng-click="$ctrl.deleteCandidate(candidate.name)"><span class="glyphicon glyphicon-trash"></span></button></td>
             </tr>
           </tbody>
         </table>

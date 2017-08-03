@@ -1,10 +1,17 @@
-<h3>Cast Your Vote!</h3>
-
-<div>
-    <div ng-repeat="candidate in $ctrl.candidates">
-        <!--One button foreach candidate-->
-        <button type="button" class="btn btn-info" ng-click="$ctrl.castVote(candidate)">
-            <span class="text-info" ng-bind="candidate.name"></span>
-        </button>
-    </div>
+<div class="vote">
+  <table class="table table-bordered blue-table">
+    <thead>
+        <tr>
+            <th class="vote-header">Cast Your Vote:</th>
+            <th class="vote-options">
+              <div ng-repeat="candidate in $ctrl.candidates" class ="horizontal-buttons">
+                   <!--One button foreach candidate-->
+                   <button type="button" class="btn btn-info" ng-click="$ctrl.castVote(candidate)">
+                       <span class="text-info" ng-bind="candidate.name"></span>
+                   </button>
+              </div>
+            </th>
+        </tr>
+    </thead>
+  </table>
 </div>
