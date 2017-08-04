@@ -76,16 +76,20 @@ main {
 }
 
 .animal-pic {
-  display: inline-block;
+  display: inline;
   padding-left: 10em;
 
 }
 
 .animals {
-  height: 22em;
-  width: auto;
+  height: auto;
+  max-width: 40%;
 }
 
 .placeholder {
   color: black
+}
+
+.manage-container {
+  display: block;
 }

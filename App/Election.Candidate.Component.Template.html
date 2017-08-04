@@ -1,36 +1,39 @@
-<div class="manage">
-    <div>
-        <!-- List of Candidates -->
-      <div class="manage-options">
-        <h3>Manage Candidates</h3>
-      </div>
-
+<div class="manage-container">
+  <div class="manage">
       <div>
-          <!-- Candidate Form -->
-          <div ng-form="$ctrl.form">
-              <div class="candidate-name">
-                  <h4 class="add-candidate-title">Add New Candidate:</h4>
-                  <input type="text" class="placeholder" placeholder="Enter Candidate Name" required ng-model="$ctrl.newCandidate.name"/>
-                  <button type="button" class="btn btn-success add" ng-click="$ctrl.addNewCandidate($ctrl.newCandidate)"><span class="glyphicon glyphicon-plus"></span></button>
-              </div>
-          </div>
+          <!-- List of Candidates -->
+        <div class="manage-options">
+          <h3>Manage Candidates</h3>
+        </div>
+
+        <div>
+            <!-- Candidate Form -->
+            <div ng-form="$ctrl.form">
+                <div class="candidate-name">
+                    <h4 class="add-candidate-title">Add New Candidate:</h4>
+                    <input type="text" class="placeholder" placeholder="Enter Candidate Name" required ng-model="$ctrl.newCandidate.name"/>
+                    <button type="button" class="btn btn-success add" ng-click="$ctrl.addNewCandidate($ctrl.newCandidate)"><span class="glyphicon glyphicon-plus"></span></button>
+                </div>
+            </div>
+        </div>
+
+        <h4>Delete Candidate:</h4>
+        <table class="table table-borderless">
+            <tbody>
+              <tr ng-repeat="candidate in $ctrl.candidates">
+                <td>
+                  <a class="delete-click" ng-click="$ctrl.deleteCandidate(candidate.name)"><span class="glyphicon glyphicon-remove-sign remove-icon"></span></a>
+                  <span ng-bind="candidate.name"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
       </div>
+  </div>
 
-      <h4>Delete Candidate:</h4>
-      <table class="table table-borderless">
-          <tbody>
-            <tr ng-repeat="candidate in $ctrl.candidates">
-              <td>
-                <a class="delete-click" ng-click="$ctrl.deleteCandidate(candidate.name)"><span class="glyphicon glyphicon-remove-sign remove-icon"></span></a>
-                <span ng-bind="candidate.name"></span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+  <div class="animal-pic">
+    <img class="animals" src="App/Images/cutepets.jpg"/>
+  </div>
 
-    </div>
-</div>
-
-<div class="animal-pic">
-  <img class="animals" src="App/Images/cutepets.jpg"/>
 </div>
