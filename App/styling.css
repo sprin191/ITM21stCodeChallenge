@@ -29,6 +29,8 @@ main {
   border: .10em solid #5588aa;
   margin-bottom: 1em;
   padding: 0em 1em 1em 1em;
+  background-color: #5588aa;
+  color: white;
 }
 
 .vote-header {
@@ -42,8 +44,12 @@ main {
   text-align: center;
 }
 
-.horizontal-buttons, .add-candidate-title {
+.horizontal-buttons {
   display: inline-block;
+}
+
+.horizontal {
+  color: white;
 }
 
 .blue-table {
@@ -51,6 +57,7 @@ main {
 }
 
 .add-candidate-title {
+  display: inline-block;
   margin-right: .5em;
 }
 
@@ -59,7 +66,7 @@ main {
 }
 
 .remove-icon {
-  color: #d9534f;
+  color: white;
   font-size: 1.2em;
 }
 
@@ -77,4 +84,8 @@ main {
 .animals {
   height: 22em;
   width: auto;
+}
+
+.placeholder {
+  color: black
 }

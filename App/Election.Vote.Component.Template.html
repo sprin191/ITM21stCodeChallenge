@@ -6,7 +6,7 @@
             <th class="vote-options">
               <div ng-repeat="candidate in $ctrl.candidates" class ="horizontal-buttons">
                    <!--One button foreach candidate-->
-                   <button type="button" class="btn btn-info" ng-click="$ctrl.castVote(candidate)">
+                   <button type="button" class="btn btn-info horizontal" ng-click="$ctrl.castVote(candidate)">
                        <span class="text-info" ng-bind="candidate.name"></span>
                    </button>
               </div>
